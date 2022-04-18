@@ -3,7 +3,7 @@ package View;
 
 import javax.swing.JOptionPane;
 
-import Dao.*;
+import Control.*;
 import Model.*;
 
 public class Menu {
@@ -35,7 +35,7 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "valores informados incorretamente");
 						break;
 					}
-					ClienteDao clienteDao = new ClienteDao();
+					ClienteControl clienteDao = new ClienteControl();
 					clienteDao.cadastarCliente(cliente, nome, cpf);
 
 				} else if (operacao == 2) {
@@ -68,7 +68,7 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "valores informados incorretamente");
 						break;
 					}
-					ProdutoDao produtoDao = new ProdutoDao();
+					ProdutoControl produtoDao = new ProdutoControl();
 					produtoDao.cadastrarProduto(produto, nome, codigo, quantidade);
 
 				} else if (operacao == 2) {
@@ -98,7 +98,7 @@ public class Menu {
 						JOptionPane.showMessageDialog(null, "valores informados incorretamente");
 						break;
 					}
-					CarrinhoDao carrinhoDao = new CarrinhoDao();
+					CarrinhoControl carrinhoDao = new CarrinhoControl();
 					carrinhoDao.cadastrarCarrinho(carrinho, idCliente);
 
 				} else if (operacao == 2) {
